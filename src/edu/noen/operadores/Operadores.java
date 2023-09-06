@@ -18,6 +18,8 @@ public class Operadores {
         System.out.println("nomeCompleto: \n" + nomeCompleto);
 
 
+
+
     }
 
 }
