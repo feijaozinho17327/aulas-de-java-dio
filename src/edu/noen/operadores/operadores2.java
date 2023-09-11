@@ -1,3 +1,5 @@
+package edu.noen.operadores;
+
 public class operadores2 {
 
     public static void main(String[] args) {
