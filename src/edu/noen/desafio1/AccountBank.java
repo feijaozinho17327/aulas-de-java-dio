@@ -8,8 +8,8 @@ public class ContaBanco {
 
         ContaTerminal contaTerminal = new ContaTerminal();
 
-        contaTerminal.digitarInformacoes(1);
-        contaTerminal.exibirInformacoes();
+        contaTerminal.enterInformation(1);
+        contaTerminal.displayInformation();
 
 
 
