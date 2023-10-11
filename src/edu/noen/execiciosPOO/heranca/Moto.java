@@ -1,4 +1,22 @@
 package edu.noen.execiciosPOO.heranca;
 
-public class Moto {
+public class Moto extends Veiculo{
+
+
+
+    private int cilindradas;
+
+    Moto(String marca, String modelo, int ano, int cilindradas) {
+
+        super(marca, modelo, ano);
+        this.cilindradas = cilindradas;
+
+
+    }
+
+    public int getCilindradas() {
+        return cilindradas;
+    }
+
+
 }

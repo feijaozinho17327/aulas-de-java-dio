@@ -2,14 +2,18 @@ package edu.noen.desafio1;
 
 
 
-public class ContaBanco {
+public class AccountBank {
 
     public static void main(String[] args) {
 
-        ContaTerminal contaTerminal = new ContaTerminal();
 
-        contaTerminal.enterInformation(1);
-        contaTerminal.displayInformation();
+
+        AccountTerminal accountTerminal = new AccountTerminal();
+
+        System.out.println("Bem Vindo ao Banco E-CORP!!!  \n\n");
+
+        accountTerminal.enterInformation(1);
+        accountTerminal.displayInformation();
 
 
 

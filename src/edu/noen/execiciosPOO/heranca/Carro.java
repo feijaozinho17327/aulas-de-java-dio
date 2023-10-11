@@ -1,4 +1,19 @@
 package edu.noen.execiciosPOO.heranca;
 
-public class Carro {
+public class Carro extends Veiculo{
+
+
+
+    private int cavalos;
+
+    Carro(String marca, String modelo, int ano, int cavalos) {
+
+        super(marca, modelo, ano);
+        this.cavalos = cavalos;
+
+    }
+    public int getCavalos() {
+        return cavalos;
+    }
+
 }

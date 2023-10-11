@@ -1,8 +1,10 @@
 package edu.noen.desafio1;
 
+import java.util.Locale;
 import java.util.Scanner;
+import java.text.NumberFormat;
 
-public class  {
+public class AccountTerminal {
 
     private int accountId;
     private String agency;
@@ -105,6 +107,7 @@ public class  {
 
         Scanner scan = new Scanner(System.in);
 
+
         String inputAccount;
         String inputAgency;
         String inputName;
@@ -112,7 +115,7 @@ public class  {
 
         while (aux == 1) {
 
-            System.out.println("Digite seu nome \n ex: José Silva");
+            System.out.println("Digite seu nome (ex: Jose Silva)");
             inputName = scan.nextLine();
 
             validateName(inputName);
@@ -139,7 +142,7 @@ public class  {
         }
 
         while (aux == 4) {
-            System.out.println("Digite o depósito");
+            System.out.println("Digite o depósito (aperte enter caso não queira efetuar um deposito)");
             inputBalance = scan.nextLine();
 
             validateBalance(inputBalance);
@@ -150,7 +153,7 @@ public class  {
 
         while (aux == 5) {
 
-            System.out.println("REGISTRO COMPLETO \n BEM-VINDO!!! \n\n");
+            System.out.println("REGISTRO COMPLETO \n");
             scan.close();
             aux++;
 
@@ -160,11 +163,15 @@ public class  {
 
     public void displayInformation() {
 
+        Locale brazil = new Locale("pt", "BR");
+        NumberFormat coinFormat = NumberFormat.getCurrencyInstance(brazil);
 
-        System.out.println("Nome completo: " + customerName + "\n");
-        System.out.println("Número da conta: " + accountId + "\n");
-        System.out.println("Agência: " + agency + "\n");
-        System.out.println("Saldo: " + balance + "\n");
+        String balanceFormatBR = coinFormat.format(balance);
+
+
+        System.out.println("Olá , " + customerName + " obrigado por criar uma conta em nosso banco," +
+                " sua agência é " + agency + ", conta " + accountId + " e seu saldo " + balanceFormatBR +
+                " já está disponível para saque.");
 
     }
 
