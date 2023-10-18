@@ -1,4 +1,4 @@
-package edu.noen.poo.exercicio01;
+package edu.noen.poo.exercicios.list.exercicio01;
 
 public class Tarefa {
 

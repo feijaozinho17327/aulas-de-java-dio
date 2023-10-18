@@ -43,6 +43,25 @@ public class Controle {
             System.out.println(E.getProduto());
         }
 
+        System.out.println("\n USANDO O COMPARATOR: \n");
+        System.out.println("Por validade do lote: ");
+
+        Collections.sort(meuEstoque, new ComparaVal());
+
+        for (Estoque E : meuEstoque) {
+
+            System.out.println(E.getProduto() + " " + E.getValLote());
+
+        }
+        System.out.println("\nPor quantidade: ");
+        Collections.sort(meuEstoque, new ComparaQtd());
+
+        for (Estoque E : meuEstoque) {
+
+            System.out.println(E.getProduto() + " " + E.getQtd());
+
+        }
+
 
 
 

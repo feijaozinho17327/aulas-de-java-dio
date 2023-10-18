@@ -1,5 +1,8 @@
 package edu.noen.poo.supermercado;
 
+
+import java.util.Comparator;
+
 public class Estoque implements Comparable<Estoque> {
 
     private final String produto;
@@ -29,4 +32,26 @@ public class Estoque implements Comparable<Estoque> {
         return produto.compareTo(estoqueL.getProduto());
 
     }
+}
+
+class ComparaQtd implements Comparator<Estoque> {
+
+    public int compare(Estoque estoque1, Estoque estoque2) {
+
+        return Integer.compare(estoque1.getQtd(), estoque2.getQtd());
+
+    }
+
+}
+
+class ComparaVal implements Comparator<Estoque> {
+
+
+    public int compare(Estoque estoque1, Estoque estoque2) {
+
+        return Integer.compare(estoque1.getValLote(), estoque2.getValLote());
+
+    }
+
+
 }
