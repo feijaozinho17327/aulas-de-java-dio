@@ -27,7 +27,7 @@ public class CadastroProduto {
     }
 
 
-    public Set<Produto> procurarProduto() {
+    public Set<Produto> ordenarProduto() {
 
         Set<Produto> produtoRealocado = new TreeSet<>(produtoSet);
 

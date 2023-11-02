@@ -23,7 +23,7 @@ public class Controle {
         System.out.println(cadastroProduto.produtoSet);
 
         System.out.println("lista ordenada por nome: \n");
-        System.out.println(cadastroProduto.procurarProduto());
+        System.out.println(cadastroProduto.ordenarProduto());
 
         System.out.println("lista ordenada por preço: \n");
         System.out.println(cadastroProduto.comparaPorPreco());
